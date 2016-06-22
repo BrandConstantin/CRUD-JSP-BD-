@@ -20,45 +20,44 @@
   <body>
     <% request.setCharacterEncoding("UTF-8"); %>
     <div class="container">
-      <div class="row"><% out.print("<img src='img/gente.jpg'/>"); %></div>
-      <div class="row s12 m12 l12">
-          <div class="card grey lighten-4">
-            <h3 class="center">Datos del Cliente BADOOO</h3>
-            <h6 class="center">(conoce gente que le va la marcha)</h6>
-            <h6 class="center">----------------------------------------------------------------------------------------------------</h6>
-          <form method="post" action="altaPersona.jsp">
+      <div class="row"></div>
+      <div class="row">
+        <div class="row col m3"></div>
+        <div class="col m6 card-panel grey lighten-5">
+          <h5 class="center">Datos del cliente</h5>
+          <form method="post" action="updatePersona.jsp">
             <div class="input-field blue-text">
               <i class="mdi-action-label-outline prefix"></i>
               <input type="number" name="clienteid" id="clienteid" value="<%=request.getParameter("clienteid") %>" readonly>
-              <label for="clienteid">CÓDIGO</label>
+              <label for="clienteid">código</label>
             </div>
             <div class="input-field">
               <i class="mdi-action-perm-identity prefix"></i>
               <input type="text" name="nombre" id="nombre" value="<%=request.getParameter("nombre") %>" required>
-              <label for="nombre">NOMBRE</label>
+              <label for="nombre">nombre</label>
             </div>
             <div class="input-field">
               <i class="mdi-communication-location-on prefix"></i>
               <input type="text" name="direccion" id="direccion" value="<%=request.getParameter("direccion") %>" required>
-              <label for="direccion">DIRECCINÓ</label>
+              <label for="direccion">dirección</label>
             </div>
             <div class="input-field">
               <i class="mdi-communication-call prefix"></i>
               <input type="text" name="telefono" id="telefono" value="<%=request.getParameter("telefono") %>" required>
-              <label for="telefono">TELÉFONO</label>
+              <label for="telefono">teléfono</label>
             </div>
             <div class="input-field">
               <i class="fa fa-birthday-cake prefix"></i>
               <input type="date" class="datepicker" name="nacimiento" id="nacimiento" value="<%=request.getParameter("nacimiento") %>" required>
-              <label for="nacimiento">FECHA NACIM.</label>
+              <label for="nacimiento">Fecha Nacim.</label>
             </div>
             <div class="input-field">
               <i class="mdi-action-perm-identity prefix"></i>
               <input type="text" name="estado" id="nombre" value="<%=request.getParameter("estado") %>" required>
-              <label for="estado">ESTADO</label>
+              <label for="estado">estado</label>
             </div>
             <p class="center">
-              <button class="btn waves-effect waves-light center green" type="submit" name="aceptar">
+              <button class="btn waves-effect waves-light center" type="submit" name="aceptar">
               Aceptar
               <i class="mdi-action-check-circle"></i>
               </button>
@@ -83,8 +82,8 @@
         labelMonthPrev: 'Mes anterior',
 
         // The title label to use for the dropdown selectors
-        labelMonthSelect: 'Selecciona mes',
-        labelYearSelect: 'Selecciona año',
+        labelMonthSelect: 'Selecciona un mes',
+        labelYearSelect: 'Selecciona un año',
 
         // Months and weekdays
         monthsFull: [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ],
@@ -98,7 +97,7 @@
         // Today and clear
         today: 'Hoy',
         clear: 'Limpiar',
-        close: 'Guardar',
+        close: 'Cerrar',
         format: "yyyy-mm-dd",
         showOtherMonths: true,
         selectOtherMonths: true,
